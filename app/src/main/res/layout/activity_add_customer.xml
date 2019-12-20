@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context=".AddCustomer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_customer"
+            android:layout_gravity="center|top"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/id_agent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/nama_lengkap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_lengkap"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/ktp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/no_ktp"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/npwp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nomor_npwp"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/no_telpon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nomor_telepon"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no"
+            android:inputType="phone"/>
+
+        <EditText
+            android:id="@+id/alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/address"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kecamatan"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/kota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kota"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no"
+            android:inputType="text"/>
+
+<!--        <EditText-->
+<!--            android:id="@+id/provinsi"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/provinsi"-->
+<!--            android:paddingStart="16dp"-->
+<!--            tools:ignore="RtlSymmetry"-->
+<!--            android:importantForAutofill="no"-->
+<!--            android:inputType="text"/>-->
+        <Spinner
+            android:id="@+id/provinsi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/kode_pos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kode_pos"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_customer"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailOrder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="6dp">
+
+                <TableRow
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nama_customer"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_order"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"/>
+
+                </TableRow>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/order_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_order_detail1">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="12dp"-->
+<!--            tools:ignore="UselessParent">-->
+
+<!--            &lt;!&ndash; Total Beli &ndash;&gt;-->
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="6dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/total_item"-->
+<!--                    android:layout_marginEnd="3dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/total_beli"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/titik2"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/total_item"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--            </TableRow>-->
+
+<!--            &lt;!&ndash; Total Berat &ndash;&gt;-->
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="6dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/total_berat"-->
+<!--                    android:layout_marginEnd="3dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/total_weight"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/titik2"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/total_berat"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--            </TableRow>-->
+
+<!--            &lt;!&ndash; Total &ndash;&gt;-->
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="6dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/total_bayar"-->
+<!--                    android:layout_marginEnd="3dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/total"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/titik2"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/total"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--            </TableRow>-->
+
+<!--            &lt;!&ndash; Shipping Fee &ndash;&gt;-->
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="6dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/fee"-->
+<!--                    android:layout_marginEnd="3dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/shipping_fee"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/titik2"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/shipping_fee"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--            </TableRow>-->
+
+<!--            &lt;!&ndash; Transaction Fee &ndash;&gt;-->
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="6dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/total_bayar"-->
+<!--                    android:layout_marginEnd="3dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/transaction_fee"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/titik2"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/transaktion_fee"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--            </TableRow>-->
+
+<!--            &lt;!&ndash; Total Bayar &ndash;&gt;-->
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="6dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/total_bayar"-->
+<!--                    android:layout_marginEnd="3dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/total_pay"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/titik2"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/total_bayar"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+<!--            </TableRow>-->
+
+<!--        </TableLayout>-->
+
+    </LinearLayout>
+
+</ScrollView>

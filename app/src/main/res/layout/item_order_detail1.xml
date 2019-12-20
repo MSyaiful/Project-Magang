@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="UselessParent">
+
+    <TableRow
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/nama_customer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/jumlah_barang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/detail"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:text="@string/detail_product"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@color/inti"
+            android:textColor="@color/white"
+            android:layout_weight="1"/>
+
+    </TableRow>
+
+</TableLayout>

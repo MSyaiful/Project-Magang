@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DashboardFragment"
+    android:background="@color/white"
+    tools:ignore="UselessParent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/dashboard"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/background"
+                    android:src="@drawable/cargo" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="84dp"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/currency"
+                            android:layout_width="220dp"
+                            android:layout_height="100dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/currency">
+
+                            <ImageView
+                                android:contentDescription="@string/background"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/currency"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/currency"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/isi_currency"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24dp"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/level"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:visibility="invisible"/>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/news"
+                            android:layout_width="220dp"
+                            android:layout_height="100dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            android:layout_toEndOf="@id/currency"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp">
+
+                            <ImageView
+                                android:contentDescription="@string/background"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/news"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/isi_news"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24dp"
+                                android:padding="8dp"
+                                android:textColor="@color/white"
+                                android:textSize="8sp"
+                                tools:ignore="SmallSp" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+<!--                        <com.google.android.material.card.MaterialCardView-->
+<!--                            android:id="@+id/ttl_customer"-->
+<!--                            android:layout_width="220dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            app:cardCornerRadius="16dp"-->
+<!--                            app:cardElevation="4dp"-->
+<!--                            android:layout_toEndOf="@id/news"-->
+<!--                            android:layout_marginStart="16dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:contentDescription="@string/background"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:src="@drawable/customerbackground"-->
+<!--                                android:scaleType="fitXY" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="@string/total_customer"-->
+<!--                                android:padding="8dp"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="12sp"/>-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/isi_ttlcustomer"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="20dp"-->
+<!--                                android:padding="8dp"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="10sp"-->
+<!--                                tools:ignore="SmallSp" />-->
+
+<!--                        </com.google.android.material.card.MaterialCardView>-->
+
+<!--                        <com.google.android.material.card.MaterialCardView-->
+<!--                            android:id="@+id/ttl_cart"-->
+<!--                            android:layout_width="220dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            app:cardCornerRadius="16dp"-->
+<!--                            app:cardElevation="4dp"-->
+<!--                            android:layout_toEndOf="@id/ttl_customer"-->
+<!--                            android:layout_marginStart="16dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:contentDescription="@string/background"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:src="@drawable/cartbackground"-->
+<!--                                android:scaleType="fitXY" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="@string/total_cart"-->
+<!--                                android:padding="8dp"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="12sp"/>-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/isi_ttlcart"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="20dp"-->
+<!--                                android:padding="8dp"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="10sp"-->
+<!--                                tools:ignore="SmallSp" />-->
+
+<!--                        </com.google.android.material.card.MaterialCardView>-->
+
+<!--                        <com.google.android.material.card.MaterialCardView-->
+<!--                            android:id="@+id/confirm_payment"-->
+<!--                            android:layout_width="220dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            app:cardCornerRadius="16dp"-->
+<!--                            app:cardElevation="4dp"-->
+<!--                            android:layout_toEndOf="@id/ttl_cart"-->
+<!--                            android:layout_marginStart="16dp"-->
+<!--                            android:layout_marginEnd="16dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:contentDescription="@string/background"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:src="@drawable/paymentbackground"-->
+<!--                                android:scaleType="fitXY" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="@string/confirm_payment"-->
+<!--                                android:padding="8dp"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="12sp"/>-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/isi_ttlpayment"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="20dp"-->
+<!--                                android:padding="8dp"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textSize="10sp"-->
+<!--                                tools:ignore="SmallSp" />-->
+
+<!--                        </com.google.android.material.card.MaterialCardView>-->
+
+                    </RelativeLayout>
+
+                </HorizontalScrollView>
+
+            </FrameLayout>
+
+            <!--Button Dashboard-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <!--cart-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cart"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="36dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cart"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/background"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cart"
+                            android:textSize="10sp"
+                            android:layout_gravity="center"
+                            tools:ignore="SmallSp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--order-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pesanan"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="36dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toEndOf="@id/cart"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pesanan"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/background"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order"
+                            android:textSize="10sp"
+                            android:layout_gravity="center"
+                            tools:ignore="SmallSp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--customer-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/customer"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="36dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toEndOf="@id/pesanan"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/customer"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/background"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/customer"
+                            android:textSize="10sp"
+                            android:layout_gravity="center"
+                            tools:ignore="SmallSp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--payment-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/payment"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toEndOf="@id/customer"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/payment"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/background"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/payment"
+                            android:textSize="10sp"
+                            android:layout_gravity="center"
+                            tools:ignore="SmallSp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:layout_marginTop="24dp"
+                tools:ignore="RtlSymmetry">
+
+                <ImageView
+                    android:id="@+id/gambar_req"
+                    android:contentDescription="@string/background"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/request"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/special_request"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@id/gambar_req"
+                    android:layout_marginTop="6dp"/>
+
+            </RelativeLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include
+                        layout="@layout/item_request_placeholder"/>
+                    <include
+                        layout="@layout/item_request_placeholder"/>
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                tools:listitem="@layout/item_request"
+                android:visibility="gone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/add_req"
+        app:fabSize="normal"
+        app:backgroundTint="@color/inti"/>
+
+</FrameLayout>
